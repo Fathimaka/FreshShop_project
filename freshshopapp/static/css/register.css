@@ -1,0 +1,44 @@
+/* Center the form */
+.card {
+    max-width: 700px;  /* Limit form width */
+    margin: 0 auto;    /* Center the card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Style the form elements (using crispy forms) */
+.form-control {
+    border-radius: 5px; /* Rounded input fields */
+    padding: 10px; /* Adequate padding */
+    margin-bottom: 15px; /* Space between fields */
+}
+
+.form-control:focus {
+    border-color: #007bff; /* Blue focus border */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Light blue glow on focus */
+}
+
+/* Button styling */
+.btn-primary {
+    border-radius: 5px; /* Rounded button */
+    padding: 12px; /* More padding for better clickability */
+}
+
+/* Error messages */
+.alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Style for the "Already have an account" link */
+.text-center a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.text-center a:hover {
+    text-decoration: underline;
+}

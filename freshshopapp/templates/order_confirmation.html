@@ -1,0 +1,14 @@
+{% extends 'user_base.html' %}
+{% load static %}
+{% block title %}user_home{% endblock %}
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/sty.css' %}">
+{% endblock %}
+
+{% block body %}
+<br><br>
+<h2 class="text-center">Order Confirmation</h2>
+<p class="text-center">Thank you for your order!</p>
+<p class="text-center">Your total payment is <strong>${{ total_price|floatformat:2 }}</strong>.</p>
+<a href="{% url 'view_product' %}" class="btn btn-primary d-block mx-auto" style="width: 200px;">Continue Shopping</a>
+{% endblock %}

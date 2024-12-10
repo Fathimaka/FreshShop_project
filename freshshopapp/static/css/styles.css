@@ -1,0 +1,39 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(to bottom right, #f7f7f7, #eaeaea);
+    color: white;
+    min-height: 100vh;
+}
+.shop-now {
+    position: relative;
+    left: -50px; /* Adjust the value as needed */
+}
+.custom-container {
+    background-color:rgb(37, 37, 37);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+
+/* Navbar Styling */
+
+.cart-icon {
+    color: #4CBB17; /* Change this to any color you like */
+    
+    
+    
+}
+
+.carousel-inner img {
+    height: 500px; /* Adjust the height as needed */
+    object-fit: cover; /* Ensures the images maintain aspect ratio while filling the space */
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Add a slight background to controls for better visibility */
+    border-radius: 50%; /* Make it circular */
+}
+

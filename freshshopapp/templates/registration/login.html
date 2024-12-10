@@ -1,0 +1,43 @@
+{% extends 'index.html' %}
+{% load static crispy_forms_tags %}
+{% block title %}Login{% endblock %}
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+
+{% block body %}
+<br><br>
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <h2 class="text-center mb-4">Login</h2>
+        <div class="card shadow">
+            <div class="card-body">
+                <!-- Add autocomplete="off" to the form element -->
+                <form method="post" autocomplete="new-password">
+                    {% csrf_token %}
+                    
+                    <!-- Add hidden fields to confuse autofill -->
+                    <input type="text" name="fakeusernameremembered" style="display:none">
+                    <input type="password" name="fakepasswordremembered" style="display:none">
+
+                    <!-- Use unique names for username and password to prevent autofill -->
+                    <div class="form-group mb-3">
+                        <label for="id_username">Username</label>
+                        <input type="text" id="id_username" class="form-control" name="username" placeholder="Enter your username" autocomplete="new-username">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="id_password">Password</label>
+                        <input type="password" id="id_password" class="form-control" name="password" placeholder="Enter your password" autocomplete="new-password">
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Login</button>
+                </form>
+                <p class="text-center mt-3">
+                    Don't have an account? <a href="{% url 'register' %}">Register here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

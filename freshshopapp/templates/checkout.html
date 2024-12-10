@@ -1,0 +1,42 @@
+{% extends 'user_base.html' %}
+{% load static %}
+{% block title %}user_home{% endblock %}
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/checkout.css' %}">
+  <link rel="stylesheet" href="{% static 'css/sty.css' %}">
+{% endblock %}
+
+{% block body %}
+<br><br>
+<h2 class="text-center">Checkout</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in cart_items %}
+        <tr>
+            <td>{{ item.product.name }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>${{ item.product.price }}</td>
+            <td>${{ item.product.price|floatformat:2 }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h3>Total Price: ${{ total_price|floatformat:2 }}</h3>
+
+<div class="d-flex justify-content-center mt-4">
+    <form method="post" class="text-center">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary">Place Order</button>
+    </form>
+</div>
+</div>
+{% endblock %}

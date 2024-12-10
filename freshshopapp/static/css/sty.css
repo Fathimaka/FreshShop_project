@@ -1,0 +1,65 @@
+/* General Navbar Styles */
+.shop-now {
+    position: relative;
+    left: -50px; /* Adjust the value as needed */
+}
+.custom-contain {
+    background-color:black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+.cart-icon {
+    color: #4CBB17; /* Change this to any color you like */
+}
+.custom-bg{
+    background-color:black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar {
+    background-color:white; 
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar-brand {
+    color:black !important; 
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: black; /* White color for links */
+    font-size: 1.1rem;
+    padding: 0.8rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color:#4CBB17 ; /* Light color on hover */
+    text-decoration: underline;
+}
+
+/* For smaller screen sizes */
+@media (max-width: 992px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.6rem;
+    }
+}
+
+/* Navbar Toggler Styles */
+.navbar-toggler-icon {
+    background-color: #ffffff; /* Light color for the toggler icon */
+}
+
+

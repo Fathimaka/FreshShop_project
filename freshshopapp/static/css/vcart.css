@@ -1,0 +1,104 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Light background color for the body */
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h5 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+    color: #dc3545; /* Red color for empty cart message */
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Table Styles */
+.table {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.table thead {
+    background-color: #343a40; /* Dark background for table header */
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.table th,
+.table td {
+    padding: 1rem;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #f8f9fa;
+}
+
+.table tbody tr:hover {
+    background-color: #e9ecef;
+    cursor: pointer;
+}
+
+/* Checkout Button */
+.btn-lg {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .table th,
+    .table td {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+
+    h5 {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Checkout Button */
+    .btn-lg {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    h5 {
+        font-size: 1.3rem;
+    }
+
+    .table th,
+    .table td {
+        font-size: 0.8rem;
+        padding: 0.6rem;
+    }
+
+    /* Checkout Button */
+    .btn-lg {
+        font-size: 0.9rem;
+        padding: 8px 14px;
+    }
+}
+

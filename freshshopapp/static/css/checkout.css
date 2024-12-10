@@ -1,0 +1,106 @@
+/* General Styles */
+body {
+    background-color: #f8f9fa; /* Light background for the body */
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #007bff; /* Blue color for total price */
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.table {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.table thead {
+    background-color: #343a40;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.table th,
+.table td {
+    padding: 1rem;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.table td {
+    vertical-align: middle;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #f8f9fa;
+}
+
+.table tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+/* Button Styling */
+.btn-primary {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    width: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .table th,
+    .table td {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    .btn-primary {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .table th,
+    .table td {
+        font-size: 0.8rem;
+        padding: 0.6rem;
+    }
+
+    .btn-primary {
+        font-size: 0.9rem;
+        padding: 8px 14px;
+    }
+}

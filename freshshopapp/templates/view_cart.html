@@ -1,0 +1,69 @@
+{% extends 'user_base.html' %}
+{% load static %}
+{% block title %}view_cart{% endblock %}
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/sty.css' %}">
+  <link rel="stylesheet" href="{% static 'css/vcart.css' %}">
+{% endblock %}
+
+{% block body %}
+<br><br>
+{% if cart_items %}
+<h5>Your Cart</h5>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total Price</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in cart_items %}
+            <tr>
+                <td>{{ item.product.name }}</td>
+                <td>
+                    <!-- Quantity Buttons -->
+                    <form method="post" action="{% url 'update_cart_quantity' %}" class="d-inline">
+                        {% csrf_token %}
+                        <input type="hidden" name="item_id" value="{{ item.id }}">
+                        <button type="submit" name="action" value="decrease" class="btn btn-secondary btn-sm">-</button>
+                    </form>
+                    <span class="mx-2">{{ item.quantity }}</span>
+                    <form method="post" action="{% url 'update_cart_quantity' %}" class="d-inline">
+                        {% csrf_token %}
+                        <input type="hidden" name="item_id" value="{{ item.id }}">
+                        <button type="submit" name="action" value="increase" class="btn btn-secondary btn-sm">+</button>
+                    </form>
+                </td>
+                <td>₹{{ item.product.price|floatformat:2 }}</td>
+                <td>₹{{ item.individual_total|floatformat:2 }}</td>
+                <td>
+                    <!-- Remove Button -->
+                    <form method="post" action="{% url 'remove_from_cart' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="item_id" value="{{ item.id }}">
+                        <button type="submit" class="btn btn-danger btn-sm">Remove</button>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    
+</table>
+
+<!-- Grand Total -->
+<div class="text-end mt-4">
+    <h5>Grand Total: ${{ total_price|floatformat:2 }}</h5>
+</div>
+
+<!-- Checkout Button -->
+<div class="text-end mt-4">
+    <a href="{% url 'checkout' %}" class="btn btn-success btn-lg custom-btn">Checkout</a>
+</div>
+{% else %}
+    <h1>Your cart is empty.</h1>
+{% endif %}
+{% endblock %}

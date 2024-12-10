@@ -1,0 +1,134 @@
+/* Product card styling */
+.product-card {
+    margin: 15px 0;
+    border: 1px solid #ddd;  /* Light gray border */
+    border-radius: 8px; /* Rounded corners for the card */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Light shadow around the card */
+    overflow: hidden;  /* Ensures the content is contained within the card */
+    display: flex;
+    flex-direction: column;
+    height: 400px; /* Ensure all cards have the same height */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Hover effect on the product card */
+.product-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    transform: translateY(-5px); /* Lift effect */
+}
+
+/* Optional: Change background color on hover */
+.product-card:hover .card-body {
+    background-color: #f9f9f9; /* Light gray background on hover */
+}
+
+/* Product image styling */
+.product-card img {
+    width: 100%; /* Make sure the image takes full width */
+    height: 250px; /* Set a fixed height for the image */
+    object-fit: cover; /* Makes sure the image fills the space without distortion */
+    flex-shrink: 0; /* Prevents the image from shrinking */
+    padding-top: 15px;
+    background-color: transparent; /* Ensures no background color behind the image */
+    display: block; /* Ensures the image is displayed as a block element */
+}
+
+/* Card body content */
+.product-card .card-body {
+    padding: 15px;
+    text-align: center;
+    flex-grow: 1; /* Ensures the body takes up remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Makes the content spread out evenly */
+    overflow: hidden; /* Prevents body overflow */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Button styling */
+.product-card .btn {
+    background-color: #4CBB17 !important; /* Bootstrap primary color */
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 4px; /* Rounded corners for the button */
+    text-decoration: none;
+    margin-top: auto; /* Push the button to the bottom */
+}
+
+/* Hover effect on button */
+.product-card .btn:hover {
+    background-color: #4CBB17 !important; /* Darker green on hover */
+    text-decoration: none;
+}
+
+/* Pagination styling */
+.pagination {
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #007bff; /* Active page color */
+    border-color: #007bff;
+}
+
+.pagination .page-item .page-link {
+    color: black;
+}
+
+.pagination .page-item .page-link:hover {
+    background-color: #f1f1f1;
+    border-color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .product-card {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .product-card {
+        width: 48%; /* 2 cards per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        width: 100%; /* Full width cards on smaller screens */
+    }
+
+    .product-card img {
+        height: 180px; /* Reduce image height on small screens */
+    }
+
+    .pagination {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-card .card-title {
+        font-size: 16px; /* Adjust font size on very small screens */
+    }
+
+    .product-card .card-text {
+        font-size: 12px; /* Adjust font size on very small screens */
+    }
+
+    .product-card .card-price {
+        font-size: 14px;
+    }
+
+    .product-card .btn {
+        font-size: 12px; /* Adjust button font size on very small screens */
+    }
+}
+
+h2 {
+    text-align: center;
+}
